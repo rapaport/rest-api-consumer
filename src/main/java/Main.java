@@ -11,17 +11,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args)
     {
+
+        System.out.println("This is a small project to practice using and working with an API");
+        System.out.println("I am using an API by Open Library.");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the topic you are interested in (one word):");
         String userSubject = scanner.nextLine();
 
-        System.out.println("Enter the earliest year the book should be from (4 digits):");
+        System.out.println("Enter the earliest year the book should be from (YYYY):");
         int userStartYear = scanner.nextInt();
 
-        System.out.println("Enter the latest year the book should be from (4 digits):");
+        System.out.println("Enter the latest year the book should be from (YYYY):");
         int userEndYear = scanner.nextInt();
 
-
+        System.out.println("I found the following books:");
 
 
         try {
@@ -69,6 +72,12 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
+
+
+
 
         scanner.close();
     }
