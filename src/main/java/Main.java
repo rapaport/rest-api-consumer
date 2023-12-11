@@ -5,15 +5,30 @@ import response.UserResponse;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class Main {
     public static void main(String[] args)
     {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the topic you are interested in (one word):");
+        String userSubject = scanner.nextLine();
+
+        System.out.println("Enter the earliest year the book should be from (4 digits):");
+        int userStartYear = scanner.nextInt();
+
+        System.out.println("Enter the latest year the book should be from (4 digits):");
+        int userEndYear = scanner.nextInt();
+
+
+
+
         try {
 
             BookFetcher bookFetcher = new BookFetcher();
-            bookFetcher.getBookList("mid-century", 2005, 2023, 30);
+            //bookFetcher.getBookList("mid-century", 2005, 2023, 30);
+            bookFetcher.getBookList(userSubject, userStartYear, userEndYear, 30);
             //BookFetcher anotherBookFetcher = new BookFetcher();
 
             // activities
@@ -54,5 +69,7 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        scanner.close();
     }
 }
