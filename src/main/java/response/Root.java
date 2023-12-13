@@ -6,4 +6,14 @@ public class Root{
     public String subject_type;
     public int work_count;
     public ArrayList<Work> works;
+
+
+
+    public String getRootName() {
+        return name;
+    }
+
+    public String getRootKey() {
+        return key;
+    }
 }

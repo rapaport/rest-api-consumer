@@ -17,5 +17,22 @@ public class Work{
     public Object ia;
     public boolean public_scan;
     public boolean has_fulltext;
+
+
+
+    public String getWorkTitle() {
+        return title;
+    }
+
+    public int getWorkCover() {
+        return cover_id;
+    }
+
+    public String getWorkKey() {
+        return key;
+    }
+
+
+
 }
 

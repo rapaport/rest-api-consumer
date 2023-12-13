@@ -2,7 +2,11 @@ import response.Activity;
 import response.Joke;
 import response.User;
 import response.UserResponse;
+import response.Author;
+import response.Root;
+import response.Work;
 
+//import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
@@ -33,6 +37,9 @@ public class Main {
             //bookFetcher.getBookList("mid-century", 2005, 2023, 30);
             bookFetcher.getBookList(userSubject, userStartYear, userEndYear, 30);
             //BookFetcher anotherBookFetcher = new BookFetcher();
+
+            //ObjectMapper objectMapper = new ObjectMapper();
+            //BookRes result = objectMapper.readValue(booksResult, BookRes.class);
 
             // activities
 //            ActivityFetcher activityFetcher = new ActivityFetcher();
@@ -73,6 +80,7 @@ public class Main {
             e.printStackTrace();
         }
 
+        //System.out.println("Author:" + Author.getAuthorName()); // does not work because non-static variable name cannot be referenced from a static context
 
 
 
